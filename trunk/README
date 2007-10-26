@@ -1,0 +1,26 @@
+Running the Demos
+=================
+
+To run the gears demo from the command line, go to the project directory and execute:
+
+java -cp $SCALA_HOME/lib/scala-library.jar:bin:lib/jogl.jar:lib/gluegen-rt.jar -Djava.library.path=lib scalagl.Gears
+
+This sets up the classpath (we need the scala standard library, the bin folder of the ScalaGL project folder, and two jars from the JOGL project) and native library path. SCALA_HOME should point to your root scala directory, i.e., where the bin and lib folders are located. Make sure that appropriate native JOGL libs for your platform are located in the lib directory of the project folder. They can be downloaded from https://jogl.dev.java.net/. For Linux, these are the following:
+
+libgluegen-rt.so
+libjogl_awt.so
+libjogl_cg.so
+libjogl.so
+
+
+To run the demos in Eclipse, just run them as "Scala Application" from the context menu. It will fail the first time, since the native libraries are missing. To add them, add
+
+-Djava.library.path=lib
+
+to the VM arguments in the run dialog (open run dialog, select demo from the list, go to tab "Arguments"). Make sure that appropriate native JOGL libs for your platform are in the lib folder. See above.
+
+
+
+
+
+
