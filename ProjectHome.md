@@ -1,0 +1,1 @@
+[OpenGL](http://opengl.org) bindings for the [Scala](http://scala-lang.org) programming language. It is a simplistic wrapper around [JOGL](https://jogl.dev.java.net/) that makes use of some nifty Scala features for now.
